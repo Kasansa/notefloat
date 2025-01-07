@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Make the top area draggable */
+.drag-area {
+  -webkit-app-region: drag;
+  background-color: rgba(0, 0, 0, 0.8); /* Visible header for clarity */
+  height: 30px; /* Adjust the height as needed */
+  width: 100%;
+  cursor: grab;
+}
+
+/* Prevent dragging on buttons or inputs inside the drag area */
+.drag-area .no-drag {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+
+/* Ensure the rest of the app is interactive */
+.app-container {
+  -webkit-app-region: no-drag;
+  background: rgba(255, 255, 255, 1); /* Solid background for app */
+}
+
+.anime {
+  background-image: url(wallpaper1.jpg);
+  background-size: cover;
+  background-position: center;
+}
